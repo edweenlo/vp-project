@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VP Project - Vanishing Point</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="horizon-container">
+    <div id="horizon">
+      <!-- Red vanishing point (north) -->
+      <div id="vanishing-point" class="vanishing-point"></div>
+      <!-- Green vanishing point (90 degrees offset) -->
+      <div id="vanishing-point-2" class="vanishing-point" style="background-color: green;"></div>
+    </div>
+  </div>
+
+  <div id="controls">
+    <label for="horizon-slider">Horizon Line Height:</label>
+    <input type="range" id="horizon-slider" min="20" max="80" value="50" oninput="updateHorizon()">
+
+    <label for="vanishing-point-slider">Vanishing Point Position:</label>
+    <input type="range" id="vanishing-point-slider" min="0" max="100" value="50" oninput="updateVanishingPoint()">
+  </div>
+
+  <div id="preview-container">
+    <canvas id="topdown-preview" width="150" height="150"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
